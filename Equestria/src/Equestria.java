@@ -1,56 +1,26 @@
-import java.util.Arrays;
-import java.util.List;
-
-class Equestria {
+public class Equestria {
 
     public static void main(String[] args) {
         System.out.println(roadTrip(15));
         System.out.println(roadTrip(22));
-        System.out.println(distance(Destination.BALTIMARE, Destination.MANEHATTAN));
-        System.out.println(totalTrip(Arrays.asList(Destination.values())));
+        System.out.println(totalTrip(29, 16, 34, 8, 6, 19, 22, 7));
     }
 
     private static double roadTrip(double diameter) {
         return diameter * Math.PI;
     }
 
-    private static double distance(Destination start, Destination end) {
-        return distance(start.x, start.y, end.x, end.y);
-    }
-
     private static double distance(int x1, int y1, int x2, int y2) {
         return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
-    private static double totalTrip(List<Destination> destinations) {
+    private static double totalTrip(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4) {
         double totalDistance = 0;
-        for (int i = 0; i < destinations.size(); i++) {
-            if (i < destinations.size() - 1) {
-                totalDistance += distance(destinations.get(i), destinations.get(i + 1));
-            } else {
-                //Now add the distance from the last destination back to the start point
-                totalDistance += distance(destinations.get(i), destinations.get(0));
-            }
-        }
+        totalDistance += distance(x1, y1, x2, y2);
+        totalDistance += distance(x2, y2, x3, y3);
+        totalDistance += distance(x3, y3, x4, y4);
+        totalDistance += distance(x4, y4, x1, y1);
         return totalDistance;
-    }
-
-    private enum Destination {
-        BALTIMARE(29, 16),
-        MANEHATTAN(34, 8),
-        LOS_PEGASUS(6, 19),
-        NEIGHAGRA_FALLS(22, 7),
-        BADLANDS(25, 24),
-        PONYVILLE(16, 14);
-
-        private int x;
-        private int y;
-
-        Destination(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
     }
 
 }
