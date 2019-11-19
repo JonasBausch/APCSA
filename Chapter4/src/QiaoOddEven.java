@@ -21,7 +21,7 @@ public class QiaoOddEven {
             if (answer.equals("Y")) {
                 System.out.print("Enter an integer: ");
                 int number = console.nextInt();
-
+                console.nextLine();
                 if (number % 2 == 0) {
                     System.out.println("The integer " + number + " is even.");
                 } else
