@@ -76,6 +76,8 @@ public class Arrays {
         //Exercise 3f
         System.out.println(even[100]);
 
+        java.util.Arrays.equals(array1, array2);
+
         //Exercise 3g
         System.out.println(even[278]);
         System.out.println(even[456]);
@@ -83,6 +85,17 @@ public class Arrays {
         //Exercise 3h/i
         int[] odd = getOddNumbers(-9, 5);
         printArray("odd", odd);
+
+        //2d array
+        int[][] grid = new int[10][10];
+        int value = 0;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < 10; j++) {
+                grid[i][j] = value++;
+            }
+        }
+        printGrid(grid);
+        int[][][][][][][][][] complmex = new int[1][1][1][1][1][1][1][1][1];
     }
 
     private static int[] getOddNumbers(int min, int max) {
@@ -122,5 +135,14 @@ public class Arrays {
             }
         }
         System.out.println();
+    }
+
+    private static void printGrid(int[][] grid) {
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
+                System.out.print(grid[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
