@@ -1,3 +1,7 @@
+package ca.teals.apcsa.algorithms.sorting;
+
+import ca.teals.apcsa.algorithms.AlgorithmType;
+
 public class InsertionSort extends SortingAlgorithm {
 
     @Override

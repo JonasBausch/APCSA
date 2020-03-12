@@ -1,3 +1,8 @@
+package ca.teals.apcsa.algorithms.sorting;
+
+import ca.teals.apcsa.algorithms.Algorithm;
+import ca.teals.apcsa.algorithms.AlgorithmType;
+
 import java.util.Arrays;
 
 public abstract class SortingAlgorithm implements Algorithm {
@@ -14,7 +19,7 @@ public abstract class SortingAlgorithm implements Algorithm {
             long startTime = System.nanoTime();
             sort(output);
             long duration = System.nanoTime() - startTime;
-            return new SortingAlgorithmResult(getAlgorithmType(), duration, input, output);
+            return new SortingAlgorithmResult(getAlgorithmType(), duration, input.length);
         } else {
             throw new IllegalArgumentException("Provided object must be of type int[] but was " + object.getClass());
         }
