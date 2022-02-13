@@ -4,10 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/APCSA.iml" filepath="$PROJECT_DIR$/APCSA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CelebrityLab/CelebrityLab.iml" filepath="$PROJECT_DIR$/CelebrityLab/CelebrityLab.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter4/Chapter4.iml" filepath="$PROJECT_DIR$/Chapter4/Chapter4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Equestria/Equestria.iml" filepath="$PROJECT_DIR$/Equestria/Equestria.iml" />
       <module fileurl="file://$PROJECT_DIR$/PixLab/PixLab.iml" filepath="$PROJECT_DIR$/PixLab/PixLab.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pokemon/Pokemon.iml" filepath="$PROJECT_DIR$/Pokemon/Pokemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sandbox/Sandbox.iml" filepath="$PROJECT_DIR$/Sandbox/Sandbox.iml" />
     </modules>
   </component>
 </project>

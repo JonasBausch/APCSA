@@ -16,15 +16,22 @@ public class MergeSort extends SortingAlgorithm {
 
     private void mergeSort(int[] elements, int size) {
         if (size < 2) {
+            //break condition, we have no more elements to sort in this cycle
             return;
         }
+        // find the middle
         int middle = size / 2;
+        // create left and right arrays
         int[] leftElements = new int[middle];
         int[] rightElements = new int[size - middle];
+        //populate left and right arrays
         System.arraycopy(elements, 0, leftElements, 0, middle);
         System.arraycopy(elements, middle, rightElements, 0, size - middle);
+        //merge sort
+        //do the same thing with left and right arrays
         mergeSort(leftElements, middle);
         mergeSort(rightElements, size - middle);
+        //merge the elements
         merge(elements, leftElements, rightElements, middle, size - middle);
     }
 
